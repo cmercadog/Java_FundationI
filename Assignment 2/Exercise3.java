@@ -1,3 +1,4 @@
+
 /**
  * Exercise3
  * Two strings that have the same characters, but that are in a different order, are anagrams. 
@@ -18,34 +19,27 @@ public class Exercise3 {
         for (int i = 0; i < textOne.length(); i++) {
             char charValue = textOne.charAt(i);
             if (charValue != ' ') {
-                
+
                 Integer currentQuantity = repeatingCharacterI.getOrDefault(charValue, 0);
                 repeatingCharacterI.put(charValue, ++currentQuantity);
             }
-            
-                     
+
         }
         for (int i = 0; i < textTwo.length(); i++) {
-            char charValue = textTwo.charAt(i);     
+            char charValue = textTwo.charAt(i);
             if (charValue != ' ') {
                 Integer currentQuantity = repeatingCharacterII.getOrDefault(charValue, 0);
                 repeatingCharacterII.put(charValue, ++currentQuantity);
-            } 
-            
-      
+            }
+
         }
-       
 
         if (repeatingCharacterI.equals(repeatingCharacterII)) {
-            System.out.print("Texts are equal"); 
+            System.out.print("Texts are equal");
         } else {
-            System.out.print("Texts are not equal"); 
+            System.out.print("Texts are not equal");
         }
 
-        
-       
     }
 
-    }
-
-    
+}

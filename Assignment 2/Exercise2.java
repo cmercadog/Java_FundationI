@@ -1,3 +1,4 @@
+
 /**
  * Exercise2
  * Make a program that counts the number of occurrences of every repeating word, not you should ignore those words that are not repeating. 
@@ -11,20 +12,19 @@
 import java.util.HashMap;
 
 public class Exercise2 {
-public static void main(String[] args) {
-    
- 
+    public static void main(String[] args) {
+
         String value = "This is is a new text text that have repeating repeating repeating words";
-        String [] arrayWords = value.split(" ");
-        
+        String[] arrayWords = value.split(" ");
+
         HashMap<String, Integer> repeatingWord = new HashMap<>();
-        
+
         for (int i = 0; i < arrayWords.length; i++) {
-            String wordValue = arrayWords[i];      
+            String wordValue = arrayWords[i];
             Integer currentQuantity = repeatingWord.getOrDefault(wordValue, 0);
-          
+
             repeatingWord.put(wordValue, ++currentQuantity);
-      
+
         }
 
         for (int i = 0; i < arrayWords.length; i++) {
@@ -32,9 +32,9 @@ public static void main(String[] args) {
             if (quantity == 1) {
                 repeatingWord.remove(arrayWords[i]);
             }
-                         
+
         }
         System.out.print(repeatingWord);
     }
-    
+
 }
