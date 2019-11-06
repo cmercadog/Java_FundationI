@@ -24,26 +24,15 @@ public class Exercise4 {
     }
 
     public static int mismatch(int[] left, int[] right) {
-        boolean iguales = false;
-        int indice = 0;
 
         for (int i = 0; i < left.length; i++) {
-            if (left[i] == right[i]) {
-                iguales = true;
-            } else {
-                iguales = false;
-                indice = i;
-                break;
-
+            if (left[i] != right[i]) {
+                return i;
             }
 
         }
 
-        if (!iguales) {
-            return indice;
-        } else {
-            return -1;
-        }
+        return -1;
 
     }
 }
